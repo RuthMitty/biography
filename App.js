@@ -25,11 +25,13 @@ const styles = StyleSheet.create({
     padding: '10%'
   },
   title: {
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: 'bold',
-    color: '#dfe6e9'
+    color: '#dfe6e9',
+    textAlign: 'center'
   },
   image: {
+    borderRadius: 10,
     width: 100,
     height: 100,
     alignSelf: 'center',
