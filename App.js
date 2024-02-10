@@ -1,20 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {View, Text, StyleSheet, SafeAreaView, ScrollView, Image} from 'react-native';
+import TextComponent from './components/TextComponent';
+import GalleryComponent from './components/GalleryComponent';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+const App = () => {
+  return(
+    <SafeAreaView style={styles.container}>
+      <ScrollView>
+        <Text style={styles.title}>Mi biografía</Text>
+        <Image style={styles.image} source={require('./assets/images/yop.jpeg')}/>
+        <TextComponent />
+        <GalleryComponent />
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    height: '100%',
+    width: '100%',
     justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#487eb0',
+    padding: '10%'
   },
-});
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#dfe6e9'
+  },
+  image: {
+    width: 100,
+    height: 100,
+    alignSelf: 'center',
+    flex:1
+  }
+})
+
+export default App;
